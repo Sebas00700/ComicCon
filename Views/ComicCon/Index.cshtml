@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Registro Comic-Con";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-dark">
+                <div class="card-header bg-dark text-white">
+                    <h4 class="mb-0">🎟️ Registro de Asistentes - Comic-Con</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Index" method="post">
+                        <div class="mb-3">
+                            <label for="Nombre" class="form-label">Nombre completo:</label>
+                            <input type="text" class="form-control" id="Nombre" name="Nombre" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Correo" class="form-label">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="Correo" name="Correo" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="TipoEntrada" class="form-label">Tipo de Entrada:</label>
+                            <select class="form-select" id="TipoEntrada" name="TipoEntrada" required>
+                                <option value="">Selecciona una opción...</option>
+                                <option value="General">Pase General (1 Día)</option>
+                                <option value="VIP">Pase VIP (Acceso Total)</option>
+                                <option value="Cosplayer">Pase Especial Cosplayer</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="ParticipaCosplay" name="ParticipaCosplay" value="true" />
+                            <label class="form-check-label" for="ParticipaCosplay">¿Participas en el concurso de Cosplay?</label>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 text-dark fw-bold">Completar Registro</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
